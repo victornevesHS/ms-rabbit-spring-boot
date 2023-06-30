@@ -4,6 +4,7 @@ import com.msclientes.application.representation.ClienteSaveRequest;
 import com.msclientes.domain.Cliente;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -13,11 +14,13 @@ import java.net.URI;
 @RequestMapping ("clientes")
 @RequiredArgsConstructor
 @RestController
+@Slf4j
 public class ClienteResource {
     private final ClienteService service;
 
     @GetMapping
     public String status(){
+        log.info("Obtendo status cliente");
         return "ok";
     }
 
