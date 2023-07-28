@@ -12,4 +12,3 @@ ARG EUREKA_SERVER=localhost
 
 
 ENTRYPOINT java -jar app.jar
-
